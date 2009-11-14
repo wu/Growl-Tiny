@@ -17,7 +17,7 @@ use Carp;
 
 =head1 NAME
 
-Growl::Tiny - tiny perl module for sending Growl Notifications on Mac OS X
+Growl::Tiny - tiny perl module for sending Growl notifications on Mac OS X
 
 
 =head1 SYNOPSIS
@@ -179,8 +179,6 @@ http://growl.info - The Growl Project site
 Mac::Growl - Local Growl Notification Framework.
 
 Net::Growl - Growl Notifications over the network
-
-
 
 =head1 LICENCE AND COPYRIGHT
 
