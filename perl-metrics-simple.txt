@@ -1,0 +1,40 @@
+
+Perl files found:                1
+
+Counts
+------
+total code lines:        38
+lines of non-sub code:   10
+packages found:          1
+subs/methods:            2
+
+Subroutine/Method Size
+----------------------
+min:                  4 lines
+max:                  24 lines
+mean:                 14.00 lines
+std. deviation:       10.00
+median:               14.00
+
+McCabe Complexity
+-----------------
+Code not in any subroutine::
+min:                  1
+max                   1
+mean:                 1.00
+std. deviation:       0.00
+median:               1.00
+
+Subroutines/Methods:
+min:                  1
+max:                  9
+mean:                 5.00
+std. deviation:       4.00
+median:               5.00
+
+Tab-delimited list of subroutines, with most complex at top
+-----------------------------------------------------------
+complexity	sub	path	size
+9	notify	lib/Growl/Tiny.pm	24
+1	_set_growl_command	lib/Growl/Tiny.pm	4
+1	{code not in named subroutines}	lib/Growl/Tiny.pm	10
