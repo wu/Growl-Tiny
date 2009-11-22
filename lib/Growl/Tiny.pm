@@ -127,9 +127,7 @@ sub notify {
         push @command_line_args, ( '-t', $options->{title} );
     }
 
-    system( @command_line_args ) || return 1;
-
-    return;
+    return system( @command_line_args ) ? 0 : 1;
 }
 
 # for automated testing only
