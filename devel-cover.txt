@@ -4,6 +4,12 @@ PERL_DL_NONLAZY=1 /usr/local/bin/perl "-MExtUtils::Command::MM" "-e" "test_harne
 t/00.load.t ............... ok
 t/10.growl.t .............. ok
 t/20.growl_broken.t ....... ok
+t/30.growl.singlequote.t .. ok
+t/31.growl.doublequote.t .. ok
+t/32.growl.semicolon.t .... ok
+t/33.growl.utf8.t ......... ok
+t/34.growl.backtick.t ..... ok
+t/35.growl.spaces.t ....... ok
 t/critic.t ................ ok
 t/kwalitee.t .............. ok
 t/meta.t .................. ok
@@ -11,7 +17,7 @@ t/no_tabs.t ............... ok
 t/release-pod-coverage.t .. ok
 t/release-pod-syntax.t .... ok
 All tests successful.
-Files=9, Tests=43, 17 wallclock secs ( 0.05 usr  0.04 sys +  9.10 cusr  0.62 csys =  9.81 CPU)
+Files=15, Tests=55, 21 wallclock secs ( 0.07 usr  0.06 sys + 13.63 cusr  0.95 csys = 14.71 CPU)
 Result: PASS
 Reading database from /Users/wu/projects/Growl-Tiny/Growl-Tiny-0.0.1/cover_db
 

@@ -56,6 +56,8 @@ instead.
 
 Send a growl notification.  Accepts either a hash or a hash reference.
 
+Returns true if a notification was submitted.
+
 =back
 
 =head2 Options
@@ -125,9 +127,9 @@ sub notify {
         push @command_line_args, ( '-t', $options->{title} );
     }
 
-    return if system( @command_line_args );
+    system( @command_line_args ) || return 1;
 
-    return 1;
+    return;
 }
 
 # for automated testing only
@@ -135,6 +137,8 @@ sub _set_growl_command {
     my ( $command ) = @_;
 
     $GROWL_COMMAND = $command;
+
+    return 1;
 }
 
 
@@ -159,9 +163,11 @@ The 'growlnotify' script will drop notifications when multiple
 notifications are being processed concurrently or are submitted too
 rapidly.  I only discovered this while writing the test cases.  As a
 result, this module is NOT recommended for any application where more
-than one notification might be generated per second.  If anyone knows
-a more reliable way to submit a growl notification that doesn't
-require any prereqs, please let me know.
+than one notification might be generated per second.  Note that
+Growl::Tiny will actually send messages much faster than this, but
+exceeding this rate may cause some notifications to be dropped. If
+anyone knows a more reliable way to submit a growl notification that
+doesn't require any prereqs, please let me know.
 
 There is no way to test that a notification has been displayed (or
 said another way, that it has not been dropped).  It is only possible
