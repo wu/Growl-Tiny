@@ -88,6 +88,31 @@ on-screen until clicked.
 
 Suppress this notification.
 
+=item host     => ''
+
+Send a network notification to the specified host by passing the -H
+option to growlnotify.  Note that growl must be configured to accept
+network notifications for this to work.  Set this to 'localhost' to
+use local network delivery for improved reliability--see the BUGS AND
+LIMITATIONS section below for more information.
+
+If the environment variable GROWL_HOST is set, all notifications will
+be sent to that host by default.  Individual notifications may still
+be sent to other hosts using the 'host' option.
+
+=item image    => '/path/to/image'
+
+Set the path to an image to be used as an icon for notifications.
+
+=item name     => 'Growl::Tiny'
+
+Set to the name of the application that is sending the notifications.
+By default this will be set to 'Growl::Tiny'.  Setting this to the
+name of your application allows you to customize the notification
+options for your application in the growl preferences pane under the
+'applications' tab.
+
+
 =back
 
 =cut
@@ -117,8 +142,19 @@ sub notify {
         push @command_line_args, '-s';
     }
 
+    push @command_line_args, ( '-n', $options->{name} || 'Growl::Tiny' );
+
     if ( $options->{priority} ) {
         push @command_line_args, ( '-p', $options->{priority} );
+    }
+
+    my $host = $options->{host} || $ENV{GROWL_HOST};
+    if ( $host ) {
+        push @command_line_args, ( '-H', $host );
+    }
+
+    if ( $options->{image} ) {
+        push @command_line_args, ( '--image', $options->{image} );
     }
 
     push @command_line_args, ( '-m', $options->{subject} );
@@ -127,6 +163,7 @@ sub notify {
         push @command_line_args, ( '-t', $options->{title} );
     }
 
+    #print "COMMAND: ", join " ", @command_line_args, "\n";
     return system( @command_line_args ) ? 0 : 1;
 }
 
@@ -163,14 +200,22 @@ rapidly.  I only discovered this while writing the test cases.  As a
 result, this module is NOT recommended for any application where more
 than one notification might be generated per second.  Note that
 Growl::Tiny will actually send messages much faster than this, but
-exceeding this rate may cause some notifications to be dropped. If
-anyone knows a more reliable way to submit a growl notification that
-doesn't require any prereqs, please let me know.
+exceeding this rate may cause some notifications to be dropped.
 
-There is no way to test that a notification has been displayed (or
-said another way, that it has not been dropped).  It is only possible
-to check that growlnotify returned success.  This greatly limits the
-amount and quality of automated testing that can be performed.
+The work-around for this is to use growlnotify to deliver network
+notifications to localhost.  Unlike the default mechanism used by
+growlnotify, the network delivery seems to be very reliable.  To
+enable this, go into the growl preference pane, select the 'network'
+tab, and enable 'listen for incoming connections'.  I did not have to
+restart growl after changing this setting.  Once this has been done,
+to use network notifications in Growl::Tiny, either set the
+environment variable GROWL_HOST, or else set the 'host' property on
+each notification to 'localhost'.
+
+Note that there is no reasonable way to test if a notification has
+actually been displayed and not dropped.  It is only possible to check
+that growlnotify returned success.  This greatly limits the amount and
+quality of automated testing that can be performed.
 
 =head1 EXPORT
 

@@ -1,5 +1,13 @@
 Revision history for Growl-Tiny
 
+0.0.2 Fri Dec  4, 2009  8:10 pm
+
+  - add 'host' option for network notifications
+
+  - add 'image' option - specify a path to an image for the notification icon
+
+  - add 'name' option to specify name of application sending the notification
+
 0.0.1  Sun Nov 22, 2009  2:49 pm
 
   - initial release
