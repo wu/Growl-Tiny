@@ -163,6 +163,10 @@ sub notify {
         push @command_line_args, ( '-t', $options->{title} );
     }
 
+    if ( $options->{identifier} ) {
+        push @command_line_args, ( '-d', $options->{identifier} );
+    }
+
     #print "COMMAND: ", join " ", @command_line_args, "\n";
     return system( @command_line_args ) ? 0 : 1;
 }
