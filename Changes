@@ -1,5 +1,12 @@
 Revision history for Growl-Tiny
 
+0.0.3 Sat Apr 23, 2011  1:00 am
+
+  - adding support for growl identifier
+    - message coalescing, updates an existing growl window
+
+  - update for latest version of Dist::Zilla
+
 0.0.2 Fri Dec  4, 2009  8:10 pm
 
   - add 'host' option for network notifications

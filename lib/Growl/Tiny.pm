@@ -2,10 +2,10 @@ package Growl::Tiny;
 use strict;
 use warnings;
 
+# VERSION
+
 use base 'Exporter';
 our @EXPORT_OK = ( 'notify' );
-
-our $VERSION;
 
 my $GROWL_COMMAND = "/usr/local/bin/growlnotify";
 
