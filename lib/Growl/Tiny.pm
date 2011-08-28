@@ -24,6 +24,16 @@ Growl::Tiny - tiny perl module for sending Growl notifications on Mac OS X
 
     use Growl::Tiny;
 
+    Growl::Tiny::notify( { subject  => 'notification body here',
+                           title    => 'notification title',
+                           priority => 3,
+                           sticky   => 1,
+                           title    => 'notification title',
+                           host     => 'localhost',
+                           image    => '/path/to/image.png',
+                        } );
+
+
 =head1 DESCRIPTION
 
 Following the Tiny perl module convention, this module attempts to
@@ -64,31 +74,31 @@ Returns true if a notification was submitted.
 
 =over 8
 
-=item subject  => 'required notification text'
+=item subject
 
 Text to be used for the notification body.
 
 This is a required field--no notification will be generated if it is
 not set.
 
-=item title    => 'optional title'
+=item title
 
 Optional text to be used for the notification title.
 
-=item priority => 0
+=item priority
 
 Optional priority.  This can be -2, -1, 0, 1, or 2.
 
-=item sticky   => 0
+=item sticky
 
 If 'sticky' is set to 'true', then the notification will remain
 on-screen until clicked.
 
-=item quiet    => 0
+=item quiet
 
 Suppress this notification.
 
-=item host     => ''
+=item host
 
 Send a network notification to the specified host by passing the -H
 option to growlnotify.  Note that growl must be configured to accept
@@ -100,11 +110,11 @@ If the environment variable GROWL_HOST is set, all notifications will
 be sent to that host by default.  Individual notifications may still
 be sent to other hosts using the 'host' option.
 
-=item image    => '/path/to/image'
+=item image
 
 Set the path to an image to be used as an icon for notifications.
 
-=item name     => 'Growl::Tiny'
+=item name
 
 Set to the name of the application that is sending the notifications.
 By default this will be set to 'Growl::Tiny'.  Setting this to the
@@ -112,6 +122,11 @@ name of your application allows you to customize the notification
 options for your application in the growl preferences pane under the
 'applications' tab.
 
+=item identifier
+
+Sets the identifier for the notification. The identifier is used for
+coalescing, which means multiple notifications with the same identifer
+will use a single bubble, the latest notification taking precedence.
 
 =back
 
