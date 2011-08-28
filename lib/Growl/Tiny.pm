@@ -9,10 +9,6 @@ our @EXPORT_OK = ( 'notify' );
 
 my $GROWL_COMMAND = "/usr/local/bin/growlnotify";
 
-#_* Libraries
-
-use Carp;
-
 #_* POD
 
 =head1 NAME
