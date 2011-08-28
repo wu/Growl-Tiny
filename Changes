@@ -1,5 +1,13 @@
 Revision history for Growl-Tiny
 
+0.0.4 Sun Aug 28, 2011  1:49 pm
+
+  - tweaks to documentation
+    - add example to SYNOPSIS
+    - document 'identifier' option
+
+  - add additional pod test cases and remove duplicate critic test case
+
 0.0.3 Sat Apr 23, 2011  1:00 am
 
   - adding support for growl identifier
