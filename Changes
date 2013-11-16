@@ -1,6 +1,13 @@
-Revision history for Growl-Tiny
+Revision history for perl module Growl::Tiny
 
-0.0.4 Sun Aug 28, 2011  1:49 pm
+0.0.5 2013-11-15
+
+  - add 'url' field
+  - indicate only supported OS is apple using Dist::Zilla::Plugin::AssertOS
+  - fix a few Test::PodSpelling issues
+  - update changes date format per http://search.cpan.org/perldoc?CPAN%3A%3AChanges%3A%3ASpec
+
+0.0.4 2011-08-28
 
   - tweaks to documentation
     - add example to SYNOPSIS
@@ -8,14 +15,14 @@ Revision history for Growl-Tiny
 
   - add additional pod test cases and remove duplicate critic test case
 
-0.0.3 Sat Apr 23, 2011  1:00 am
+0.0.3 2011-04-23
 
   - adding support for growl identifier
     - message coalescing, updates an existing growl window
 
   - update for latest version of Dist::Zilla
 
-0.0.2 Fri Dec  4, 2009  8:10 pm
+0.0.2 2009-12-04
 
   - add 'host' option for network notifications
 
@@ -23,7 +30,6 @@ Revision history for Growl-Tiny
 
   - add 'name' option to specify name of application sending the notification
 
-0.0.1  Sun Nov 22, 2009  2:49 pm
+0.0.1 2009-11-22
 
   - initial release
-

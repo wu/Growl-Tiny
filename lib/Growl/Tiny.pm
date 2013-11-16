@@ -3,7 +3,6 @@ use strict;
 use warnings;
 
 # VERSION
-
 use base 'Exporter';
 our @EXPORT_OK = ( 'notify' );
 
@@ -87,8 +86,8 @@ Optional priority.  This can be -2, -1, 0, 1, or 2.
 
 =item sticky
 
-If 'sticky' is set to 'true', then the notification will remain
-on-screen until clicked.
+If 'sticky' is true, then the notification will remain on-screen until
+clicked.
 
 =item quiet
 
@@ -121,8 +120,12 @@ options for your application in the growl preferences pane under the
 =item identifier
 
 Sets the identifier for the notification. The identifier is used for
-coalescing, which means multiple notifications with the same identifer
-will use a single bubble, the latest notification taking precedence.
+coalescing, which means that an old notifications with the same
+identifier will be replaced with the new notification.
+
+=item url
+
+Notification click will result in the URL being opened.
 
 =back
 
@@ -157,6 +160,10 @@ sub notify {
 
     if ( $options->{priority} ) {
         push @command_line_args, ( '-p', $options->{priority} );
+    }
+
+    if ( $options->{url} ) {
+        push @command_line_args, ( '--url', $options->{url} );
     }
 
     my $host = $options->{host} || $ENV{GROWL_HOST};
