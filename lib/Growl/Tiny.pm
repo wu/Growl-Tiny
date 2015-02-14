@@ -208,10 +208,15 @@ __END__
 
 =head1 DEPENDENCIES
 
-Growl (http://growl.info) must be installed locally.  You must also
-have the growlnotify script installed at:
+Growl (http://growl.info) and GrowlNotify must be installed locally.
+GrowlNotify is available here:
+
+  http://growl.info/downloads
+
+GrowlNotify will install the growlnotify script here:
 
     /usr/local/bin/growlnotify
+
 
 
 =head1 BUGS AND LIMITATIONS
