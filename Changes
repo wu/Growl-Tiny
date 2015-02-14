@@ -1,5 +1,11 @@
 Revision history for perl module Growl::Tiny
 
+0.0.6 2015-02-14
+
+  - update docs for GrowlNotify prereqs
+
+  - add cpanfile for development
+
 0.0.5 2013-11-15
 
   - add 'url' field
