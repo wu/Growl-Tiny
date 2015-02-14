@@ -1,5 +1,12 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  Algorithm-Diff-1.1903
+    pathname: T/TY/TYEMQ/Algorithm-Diff-1.1903.tar.gz
+    provides:
+      Algorithm::Diff 1.1903
+      Algorithm::Diff::_impl 1.1903
+    requirements:
+      ExtUtils::MakeMaker 0
   App-Cmd-0.326
     pathname: R/RJ/RJBS/App-Cmd-0.326.tar.gz
     provides:
@@ -39,6 +46,61 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  Archive-Any-Lite-0.10
+    pathname: I/IS/ISHIGAKI/Archive-Any-Lite-0.10.tar.gz
+    provides:
+      Archive::Any::Lite 0.10
+      Archive::Any::Lite::Tar 0.10
+      Archive::Any::Lite::Zip 0.10
+    requirements:
+      Archive::Tar 1.76
+      Archive::Zip 0
+      ExtUtils::MakeMaker 0
+      ExtUtils::MakeMaker::CPANfile 0.06
+      File::Spec 0
+      File::Temp 0.19
+      IO::Uncompress::Bunzip2 0
+      IO::Zlib 0
+  Archive-Zip-1.45
+    pathname: P/PH/PHRED/Archive-Zip-1.45.tar.gz
+    provides:
+      Archive::Zip 1.45
+      Archive::Zip::Archive 1.45
+      Archive::Zip::BufferedFileHandle 1.45
+      Archive::Zip::DirectoryMember 1.45
+      Archive::Zip::FileMember 1.45
+      Archive::Zip::Member 1.45
+      Archive::Zip::MemberRead 1.45
+      Archive::Zip::MockFileHandle 1.45
+      Archive::Zip::NewFileMember 1.45
+      Archive::Zip::StringMember 1.45
+      Archive::Zip::Tree 1.45
+      Archive::Zip::ZipFileMember 1.45
+    requirements:
+      Compress::Raw::Zlib 2.017
+      ExtUtils::MakeMaker 0
+      File::Basename 0
+      File::Copy 0
+      File::Find 0
+      File::Path 0
+      File::Spec 0.80
+      File::Temp 0
+      IO::File 0
+      IO::Handle 0
+      IO::Seekable 0
+      Test::More 0.88
+      Time::Local 0
+      perl 5.006
+  Array-Diff-0.07
+    pathname: T/TY/TYPESTER/Array-Diff-0.07.tar.gz
+    provides:
+      Array::Diff 0.07
+    requirements:
+      Algorithm::Diff 1.19
+      Class::Accessor::Fast 0
+      ExtUtils::MakeMaker 6.42
+      Filter::Util::Call 0
+      Test::More 0
   B-Hooks-EndOfScope-0.14
     pathname: E/ET/ETHER/B-Hooks-EndOfScope-0.14.tar.gz
     provides:
@@ -72,6 +134,13 @@ DISTRIBUTIONS
     requirements:
       B 0
       ExtUtils::MakeMaker 0
+  CPAN-DistnameInfo-0.12
+    pathname: G/GB/GBARR/CPAN-DistnameInfo-0.12.tar.gz
+    provides:
+      CPAN::DistnameInfo 0.12
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   CPAN-Meta-2.143240
     pathname: D/DA/DAGOLDEN/CPAN-Meta-2.143240.tar.gz
     provides:
@@ -136,6 +205,15 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::Exception 0
+  Class-Accessor-0.34
+    pathname: K/KA/KASEI/Class-Accessor-0.34.tar.gz
+    provides:
+      Class::Accessor 0.34
+      Class::Accessor::Fast 0.34
+      Class::Accessor::Faster 0.34
+    requirements:
+      ExtUtils::MakeMaker 0
+      base 1.01
   Class-Data-Inheritable-0.08
     pathname: T/TM/TMTM/Class-Data-Inheritable-0.08.tar.gz
     provides:
@@ -213,6 +291,17 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  Class-XSAccessor-1.19
+    pathname: S/SM/SMUELLER/Class-XSAccessor-1.19.tar.gz
+    provides:
+      Class::XSAccessor 1.19
+      Class::XSAccessor::Array 1.19
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      Time::HiRes 0
+      XSLoader 0
+      perl 5.008
   Clone-0.38
     pathname: G/GA/GARU/Clone-0.38.tar.gz
     provides:
@@ -1344,6 +1433,16 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  Devel-Symdump-2.14
+    pathname: A/AN/ANDK/Devel-Symdump-2.14.tar.gz
+    provides:
+      Devel::Symdump 2.14
+      Devel::Symdump::Export undef
+    requirements:
+      Compress::Zlib 0
+      ExtUtils::MakeMaker 0
+      Test::More 0
+      perl 5.004
   Dist-CheckConflicts-0.11
     pathname: D/DO/DOY/Dist-CheckConflicts-0.11.tar.gz
     provides:
@@ -1822,6 +1921,17 @@ DISTRIBUTIONS
       File::Spec 0
       strict 0
       warnings 0
+  ExtUtils-MakeMaker-CPANfile-0.06
+    pathname: I/IS/ISHIGAKI/ExtUtils-MakeMaker-CPANfile-0.06.tar.gz
+    provides:
+      ExtUtils::MakeMaker::CPANfile 0.06
+    requirements:
+      Cwd 0
+      ExtUtils::MakeMaker 6.17
+      File::Path 0
+      Module::CPANfile 0
+      Test::More 0.88
+      version 0.76
   ExtUtils-Manifest-1.70
     pathname: E/ET/ETHER/ExtUtils-Manifest-1.70.tar.gz
     provides:
@@ -1846,6 +1956,28 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       File::Copy 0
       File::Spec 0
+  File-Find-Object-v0.2.12
+    pathname: S/SH/SHLOMIF/File-Find-Object-v0.2.12.tar.gz
+    provides:
+      File::Find::Object 0.002012
+      File::Find::Object::Base 0.002012
+      File::Find::Object::DeepPath undef
+      File::Find::Object::PathComp 0.002012
+      File::Find::Object::Result 0.002012
+      File::Find::Object::TopPath undef
+    requirements:
+      Carp 0
+      Class::XSAccessor 0
+      Fcntl 0
+      File::Path 0
+      File::Spec 0
+      List::Util 0
+      Module::Build 0.36
+      Test::More 0
+      parent 0
+      perl 5.008
+      strict 0
+      warnings 0
   File-Find-Rule-0.33
     pathname: R/RC/RCLAMP/File-Find-Rule-0.33.tar.gz
     provides:
@@ -2145,6 +2277,17 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  IO-Capture-0.05
+    pathname: R/RE/REYNOLDS/IO-Capture-0.05.tar.gz
+    provides:
+      IO::Capture 0.05
+      IO::Capture::Stderr undef
+      IO::Capture::Stdout undef
+      IO::Capture::Tie_STDx undef
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Test::More 0
   IO-HTML-1.001
     pathname: C/CJ/CJM/IO-HTML-1.001.tar.gz
     provides:
@@ -2538,6 +2681,79 @@ DISTRIBUTIONS
       TAP::Harness::Env 0
       perl 5.006
       strict 0
+      warnings 0
+  Module-CPANTS-Analyse-0.96
+    pathname: I/IS/ISHIGAKI/Module-CPANTS-Analyse-0.96.tar.gz
+    provides:
+      Module::CPANTS::Analyse 0.96
+      Module::CPANTS::Kwalitee 0.96
+      Module::CPANTS::Kwalitee::BrokenInstaller 0.96
+      Module::CPANTS::Kwalitee::CpantsErrors 0.96
+      Module::CPANTS::Kwalitee::Distname 0.96
+      Module::CPANTS::Kwalitee::Distros 0.96
+      Module::CPANTS::Kwalitee::Files 0.96
+      Module::CPANTS::Kwalitee::FindModules 0.96
+      Module::CPANTS::Kwalitee::License 0.96
+      Module::CPANTS::Kwalitee::Manifest 0.96
+      Module::CPANTS::Kwalitee::MetaYML 0.96
+      Module::CPANTS::Kwalitee::NeedsCompiler 0.96
+      Module::CPANTS::Kwalitee::Pod 0.96
+      Module::CPANTS::Kwalitee::Prereq 0.96
+      Module::CPANTS::Kwalitee::Repackageable 0.96
+      Module::CPANTS::Kwalitee::Signature 0.96
+      Module::CPANTS::Kwalitee::Uses 0.96
+      Module::CPANTS::Kwalitee::Version 0.96
+    requirements:
+      Archive::Any::Lite 0.06
+      Archive::Tar 1.48
+      Array::Diff 0.04
+      CPAN::DistnameInfo 0.06
+      CPAN::Meta::Validator 2.133380
+      CPAN::Meta::YAML 0.008
+      Class::Accessor 0.19
+      ExtUtils::MakeMaker 0
+      ExtUtils::MakeMaker::CPANfile 0.06
+      File::Find::Object v0.2.1
+      IO::Capture 0.05
+      JSON::MaybeXS 0
+      Module::ExtractUse 0.33
+      Module::Pluggable 2.96
+      Set::Scalar 0
+      Software::License 0.103008
+      Software::License::CC_BY_SA_3_0 0
+      Text::Balanced 0
+      version 0.73
+  Module-CPANfile-1.1000
+    pathname: M/MI/MIYAGAWA/Module-CPANfile-1.1000.tar.gz
+    provides:
+      Module::CPANfile 1.1000
+      Module::CPANfile::Environment undef
+      Module::CPANfile::Prereq undef
+      Module::CPANfile::Prereqs undef
+      Module::CPANfile::Requirement undef
+    requirements:
+      CPAN::Meta 2.12091
+      CPAN::Meta::Prereqs 2.12091
+      ExtUtils::MakeMaker 0
+      parent 0
+  Module-ExtractUse-0.33
+    pathname: D/DO/DOMM/Module-ExtractUse-0.33.tar.gz
+    provides:
+      Module::ExtractUse 0.330
+      Module::ExtractUse::Grammar undef
+      Parse::RecDescent::Module::ExtractUse::Grammar undef
+    requirements:
+      Carp 0
+      Module::Build 0.3601
+      Parse::RecDescent 1.967009
+      Pod::Strip 0
+      Test::Deep 0
+      Test::More 0
+      Test::NoWarnings 0
+      perl 5.008
+      strict 0
+      vars 0
+      version 0
       warnings 0
   Module-Implementation-0.09
     pathname: D/DR/DROLSKY/Module-Implementation-0.09.tar.gz
@@ -3458,6 +3674,30 @@ DISTRIBUTIONS
       strict 0
       vars 0
       warnings 0
+  Parse-RecDescent-1.967009
+    pathname: J/JT/JTBRAUN/Parse-RecDescent-1.967009.tar.gz
+    provides:
+      Parse::RecDescent 1.967009
+      Parse::RecDescent::Action 1.967009
+      Parse::RecDescent::ColCounter 1.967009
+      Parse::RecDescent::Directive 1.967009
+      Parse::RecDescent::Error 1.967009
+      Parse::RecDescent::Expectation 1.967009
+      Parse::RecDescent::InterpLit 1.967009
+      Parse::RecDescent::LineCounter 1.967009
+      Parse::RecDescent::Literal 1.967009
+      Parse::RecDescent::OffsetCounter 1.967009
+      Parse::RecDescent::Operator 1.967009
+      Parse::RecDescent::Production 1.967009
+      Parse::RecDescent::Repetition 1.967009
+      Parse::RecDescent::Result 1.967009
+      Parse::RecDescent::Rule 1.967009
+      Parse::RecDescent::Subrule 1.967009
+      Parse::RecDescent::Token 1.967009
+      Parse::RecDescent::UncondReject 1.967009
+    requirements:
+      Test::More 0
+      Text::Balanced 1.95
   Path-Class-0.35
     pathname: K/KW/KWILLIAMS/Path-Class-0.35.tar.gz
     provides:
@@ -3902,6 +4142,32 @@ DISTRIBUTIONS
       perl 5.008
       strict 0
       warnings 0
+  Pod-Coverage-0.23
+    pathname: R/RC/RCLAMP/Pod-Coverage-0.23.tar.gz
+    provides:
+      Pod::Coverage 0.23
+      Pod::Coverage::CountParents undef
+      Pod::Coverage::ExportOnly undef
+      Pod::Coverage::Extractor 0.23
+      Pod::Coverage::Overloader undef
+    requirements:
+      Devel::Symdump 2.01
+      ExtUtils::MakeMaker 0
+      Pod::Find 0.21
+      Pod::Parser 1.13
+      Test::More 0
+  Pod-Coverage-TrustPod-0.100003
+    pathname: R/RJ/RJBS/Pod-Coverage-TrustPod-0.100003.tar.gz
+    provides:
+      Pod::Coverage::TrustPod 0.100003
+    requirements:
+      ExtUtils::MakeMaker 6.30
+      Pod::Coverage::CountParents 0
+      Pod::Eventual::Simple 0
+      Pod::Find 0
+      base 0
+      strict 0
+      warnings 0
   Pod-Eventual-0.094001
     pathname: R/RJ/RJBS/Pod-Eventual-0.094001.tar.gz
     provides:
@@ -3933,6 +4199,13 @@ DISTRIBUTIONS
       locale 0
       strict 0
       warnings 0
+  Pod-Strip-1.02
+    pathname: D/DO/DOMM/Pod-Strip-1.02.tar.gz
+    provides:
+      Pod::Strip 1.02
+    requirements:
+      Pod::Simple 3.00
+      Test::More 0
   Probe-Perl-0.03
     pathname: K/KW/KWILLIAMS/Probe-Perl-0.03.tar.gz
     provides:
@@ -3993,6 +4266,19 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::More 0
       perl 5.006001
+  Set-Scalar-1.29
+    pathname: D/DA/DAVIDO/Set-Scalar-1.29.tar.gz
+    provides:
+      Set::Scalar 1.29
+      Set::Scalar::Base 1.29
+      Set::Scalar::Null 1.29
+      Set::Scalar::Real 1.29
+      Set::Scalar::Universe 1.29
+      Set::Scalar::Valued 1.29
+      Set::Scalar::ValuedUniverse 1.29
+      Set::Scalar::Virtual 1.29
+    requirements:
+      ExtUtils::MakeMaker 0
   Software-License-0.103010
     pathname: R/RJ/RJBS/Software-License-0.103010.tar.gz
     provides:
@@ -4038,6 +4324,38 @@ DISTRIBUTIONS
       parent 0
       strict 0
       warnings 0
+  Software-License-CCpack-1.11
+    pathname: B/BB/BBYRD/Software-License-CCpack-1.11.tar.gz
+    provides:
+      Software::License::CC_BY_1_0 1.11
+      Software::License::CC_BY_2_0 1.11
+      Software::License::CC_BY_3_0 1.11
+      Software::License::CC_BY_4_0 1.11
+      Software::License::CC_BY_NC_1_0 1.11
+      Software::License::CC_BY_NC_2_0 1.11
+      Software::License::CC_BY_NC_3_0 1.11
+      Software::License::CC_BY_NC_4_0 1.11
+      Software::License::CC_BY_NC_ND_2_0 1.11
+      Software::License::CC_BY_NC_ND_3_0 1.11
+      Software::License::CC_BY_NC_ND_4_0 1.11
+      Software::License::CC_BY_NC_SA_1_0 1.11
+      Software::License::CC_BY_NC_SA_2_0 1.11
+      Software::License::CC_BY_NC_SA_3_0 1.11
+      Software::License::CC_BY_NC_SA_4_0 1.11
+      Software::License::CC_BY_ND_1_0 1.11
+      Software::License::CC_BY_ND_2_0 1.11
+      Software::License::CC_BY_ND_3_0 1.11
+      Software::License::CC_BY_ND_4_0 1.11
+      Software::License::CC_BY_ND_NC_1_0 1.11
+      Software::License::CC_BY_SA_1_0 1.11
+      Software::License::CC_BY_SA_2_0 1.11
+      Software::License::CC_BY_SA_3_0 1.11
+      Software::License::CC_BY_SA_4_0 1.11
+      Software::License::CC_PDM_1_0 1.11
+      Software::License::CCpack 1.11
+    requirements:
+      ExtUtils::MakeMaker 0
+      Software::License 0
   Sort-Versions-1.60
     pathname: N/NE/NEILB/Sort-Versions-1.60.tar.gz
     provides:
@@ -4232,6 +4550,18 @@ DISTRIBUTIONS
       Term::ReadKey 2.32
     requirements:
       ExtUtils::MakeMaker 0
+  Test-CPAN-Meta-0.24
+    pathname: B/BA/BARBIE/Test-CPAN-Meta-0.24.tar.gz
+    provides:
+      Test::CPAN::Meta 0.24
+      Test::CPAN::Meta::Version 0.24
+    requirements:
+      ExtUtils::MakeMaker 0
+      IO::File 0
+      Parse::CPAN::Meta 0.02
+      Test::Builder 0
+      Test::Builder::Tester 0
+      Test::More 0.70
   Test-Deep-0.115
     pathname: R/RJ/RJBS/Test-Deep-0.115.tar.gz
     provides:
@@ -4313,6 +4643,33 @@ DISTRIBUTIONS
       Try::Tiny 0.07
       strict 0
       warnings 0
+  Test-Kwalitee-1.22
+    pathname: E/ET/ETHER/Test-Kwalitee-1.22.tar.gz
+    provides:
+      Test::Kwalitee 1.22
+    requirements:
+      Cwd 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Module::Build::Tiny 0.037
+      Module::CPANTS::Analyse 0.92
+      Test::Builder 0.88
+      namespace::clean 0
+      parent 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Test-NoTabs-1.4
+    pathname: B/BO/BOBTFISH/Test-NoTabs-1.4.tar.gz
+    provides:
+      Test::NoTabs 1.4
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      File::Find 0
+      File::Spec 0
+      FindBin 0
+      Test::Builder 0
+      Test::More 0
   Test-NoWarnings-1.04
     pathname: A/AD/ADAMK/Test-NoWarnings-1.04.tar.gz
     provides:
@@ -4353,6 +4710,28 @@ DISTRIBUTIONS
       Perl::Critic::Violation 1.105
       Test::Builder 0
       Test::More 0
+      strict 0
+      warnings 0
+  Test-Pod-1.48
+    pathname: D/DW/DWHEELER/Test-Pod-1.48.tar.gz
+    provides:
+      Test::Pod 1.48
+    requirements:
+      File::Find 0
+      File::Spec 0
+      Module::Build 0.30
+      Pod::Simple 3.05
+      Test::Builder::Tester 1.02
+      Test::More 0.62
+  Test-Pod-Coverage-1.10
+    pathname: N/NE/NEILB/Test-Pod-Coverage-1.10.tar.gz
+    provides:
+      Test::Pod::Coverage 1.10
+    requirements:
+      ExtUtils::MakeMaker 0
+      Pod::Coverage 0
+      Test::Builder 0
+      perl 5.006
       strict 0
       warnings 0
   Test-Requires-0.08

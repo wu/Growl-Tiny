@@ -23,6 +23,11 @@ on 'develop' => sub {
   requires 'Dist::Zilla::Plugin::TestRelease';
   requires 'Dist::Zilla::Plugin::UploadToCPAN';
   requires 'Dist::Zilla::PluginBundle::Git';
-
+  requires 'Pod::Coverage::TrustPod';
+  requires 'Test::CPAN::Meta';
+  requires 'Test::Kwalitee';
+  requires 'Test::NoTabs';
+  requires 'Test::Pod';
+  requires 'Test::Pod::Coverage';
 };
 
